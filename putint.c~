@@ -2,7 +2,7 @@
 /**
  * putint - print intger
  * @num: number to be printed
- * Return : number of chars
+ * Return: number of chars
 */
 int putint(int num)
 {
@@ -11,7 +11,7 @@ int putint(int num)
 	int i = 1;
 	char *intmin = "-2147483648";
 
-	if (num == INT_MIN)
+	if (num == -2)
 	{
 		return (putstr(intmin));
 	}

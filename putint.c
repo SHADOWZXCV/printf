@@ -11,7 +11,7 @@ int putint(int num)
 	int i = 1;
 	char *intmin = "-2147483648";
 
-	if (num == INT_MIN)
+	if (num == -2147483648)
 	{
 		return (putstr(intmin));
 	}
