@@ -60,7 +60,7 @@ int checkCases(va_list *args, int *printCount, const char *format)
 		case 's':
 			{
 				str = va_arg(*args, char*);
-				(*printCount) += putstr(str);
+				*printCount += putstr(str);
 			}
 			break;
 		case 'd':
