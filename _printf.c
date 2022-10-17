@@ -59,10 +59,6 @@ int checkCases(va_list args, int *printCount, const char *format)
 				*printCount += putstr(str);
 			}
 			break;
-		case 'd':
-			break;
-		case 'i':
-			break;
 		case '\0':
 			return (-1);
 		case '%':
