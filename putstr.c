@@ -9,8 +9,8 @@ int putstr(char *str)
 {
 	int count = 0;
 
-	if(!str)
-		return putstr("(null)");
+	if (!str)
+		return (putstr("(null)"));
 
 	while (*str)
 	{
