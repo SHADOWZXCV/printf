@@ -46,7 +46,6 @@ int _printf(const char *format, ...)
 int checkCases(va_list args, int *printCount, const char *format)
 {
 	char *str;
-	int tmp;
 
 	switch (*(format))
 	{
@@ -59,14 +58,6 @@ int checkCases(va_list args, int *printCount, const char *format)
 				str = va_arg(args, char*);
 				*printCount += putstr(str);
 			}
-			break;
-		case 'd':
-			tmp = va_arg(args, int);
-			printCount += putint(tmp);
-			break;
-		case 'i':
-			tmp = va_arg(args, int);
-			printCount += putint(tmp);
 			break;
 		case '\0':
 			_putchar('%');
