@@ -6,7 +6,7 @@ int main(void){
 	
 	len = printf("hello world %d %d\n", 101011, 56789);
 	printf("lenptr[%d]\n", len);
-	len = printf("hello world %d %d\n", 101011, 56789);
+	len = _printf("hello world %d %d\n", 101011, 56789);
 	printf("len_ptr[%d]\n", len);
 		
 	return 0;

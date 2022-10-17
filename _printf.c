@@ -57,16 +57,16 @@ int checkCases(va_list *args, int *printCount, const char *format)
 		case 's':
 			{
 				str = va_arg(*args, char*);
-				*printCount += putstr(str);
+				*(printCount) += putstr(str);
 			}
 			break;
 		case 'd':
 			tmp = va_arg(*args, int);
-			printCount += putint(tmp);
+			*(printCount) += putint(tmp);
 			break;
 		case 'i':
 			tmp = va_arg(*args, int);
-			printCount += putint(tmp);
+			*(printCount) += putint(tmp);
 			break;
 		case '\0':
 			_putchar('%');
