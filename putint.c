@@ -9,7 +9,12 @@ int putint(int num)
 	int count = 0;
 	int tmp, tmpp, sign;
 	int i = 1;
+	char *intmin = "-2147483648";
 
+	if (num == INT_MIN)
+	{
+		return (putstr(intmin));
+	}
 	sign = num < 0 ? 1 : 0;
 	if (sign)
 	{

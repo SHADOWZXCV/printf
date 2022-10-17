@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 
-int checkCases(va_list args, int *printCount, const char *format);
+int checkCases(va_list *args, int *printCount, const char *format);
 
 /**
  * _printf - prints a string with a specific format to stdout
@@ -25,7 +25,7 @@ int _printf(const char *format, ...)
 			continue;
 		}
 
-		result = checkCases(args, &printCount, ++format);
+		result = checkCases(&args, &printCount, ++format);
 
 		if (result == -1)
 			return (printCount);
@@ -43,7 +43,7 @@ int _printf(const char *format, ...)
  * @format: the formatted string.
  * Return: if successful, returns 0, otherwise, -1 is returned.
  */
-int checkCases(va_list args, int *printCount, const char *format)
+int checkCases(va_list *args, int *printCount, const char *format)
 {
 	char *str;
 	int tmp;
@@ -51,21 +51,21 @@ int checkCases(va_list args, int *printCount, const char *format)
 	switch (*(format))
 	{
 		case 'c':
-			_putchar(va_arg(args, int));
+			_putchar(va_arg(*args, int));
 			(*printCount)++;
 			break;
 		case 's':
 			{
-				str = va_arg(args, char*);
+				str = va_arg(*args, char*);
 				*printCount += putstr(str);
 			}
 			break;
 		case 'd':
-			tmp = va_arg(args, int);
+			tmp = va_arg(*args, int);
 			printCount += putint(tmp);
 			break;
 		case 'i':
-			tmp = va_arg(args, int);
+			tmp = va_arg(*args, int);
 			printCount += putint(tmp);
 			break;
 		case '\0':

@@ -2,6 +2,7 @@
 #define MAIN_H
 #include <stdarg.h>
 #include <unistd.h>
+#include <limits.h>
 
 int putstr(char *str);
 int putint(int num);
