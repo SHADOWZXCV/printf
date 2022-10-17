@@ -13,6 +13,9 @@ int _printf(const char *format, ...)
 {
 	int printCount = 0, result;
 	va_list args;
+
+	if (format == NULL)
+		return (-1);
 	
 	va_start(args, format);
 
@@ -57,7 +60,7 @@ int checkCases(va_list *args, int *printCount, const char *format)
 		case 's':
 			{
 				str = va_arg(*args, char*);
-				*(printCount) += putstr(str);
+				(*printCount) += putstr(str);
 			}
 			break;
 		case 'd':
