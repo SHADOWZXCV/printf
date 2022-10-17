@@ -60,6 +60,8 @@ int checkCases(va_list args, int *printCount, const char *format)
 			}
 			break;
 		case '\0':
+			_putchar('%');
+			(*printCount)++;
 			return (-1);
 		case '%':
 			_putchar(*(format));
@@ -68,7 +70,7 @@ int checkCases(va_list args, int *printCount, const char *format)
 		default:
 			_putchar('%');
 			_putchar(*(format));
-			(*printCount)++;
+			(*printCount) += 2;
 			break;
 		}
 
