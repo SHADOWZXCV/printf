@@ -5,6 +5,7 @@
 #include <limits.h>
 
 int putstr(char *str);
+int putbinary(int num);
 int putint(int num);
 int _printf(const char *format, ...);
 int _putchar(char c);

@@ -71,6 +71,10 @@ int checkCases(va_list *args, int *printCount, const char *format)
 			tmp = va_arg(*args, int);
 			*(printCount) += putint(tmp);
 			break;
+		case 'd'
+			tmp = va_arg(*args, int);
+			*(printCount) += putbinary(tmp);
+			break;
 		case '\0':
 			_putchar('%');
 			(*printCount)++;
