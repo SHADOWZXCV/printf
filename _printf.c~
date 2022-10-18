@@ -71,7 +71,7 @@ int checkCases(va_list *args, int *printCount, const char *format)
 			tmp = va_arg(*args, int);
 			*(printCount) += putint(tmp);
 			break;
-		case 'd':
+		case 'b':
 			tmp = va_arg(*args, int);
 			*(printCount) += putbinary(tmp);
 			break;
