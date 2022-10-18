@@ -5,7 +5,7 @@
  * @num: number to be converted
  * Return: void
 */
-void binary(unsigned int num)
+void binary(int num)
 {
 	if (num == 0)
 		return;
@@ -17,7 +17,7 @@ void binary(unsigned int num)
  * @num: number to be converted
  * Return: number of chars
 */
-int putbinary(unsigned int num)
+int putbinary(int num)
 {
 	int count = 0;
 

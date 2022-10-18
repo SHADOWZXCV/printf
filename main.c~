@@ -2,7 +2,9 @@
 #include <stdio.h>
 #include "main.h"
 int main(void){
-	_printf("%b", 16);
+	_printf("%b\n", 23);
+	printf("%B\n", 23);
+		
 	return 0;
 }
 /**

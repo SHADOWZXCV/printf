@@ -50,6 +50,7 @@ int checkCases(va_list *args, int *printCount, const char *format)
 {
 	char *str;
 	int tmp;
+	unsigned int tmmp;
 
 	switch (*(format))
 	{
@@ -72,8 +73,8 @@ int checkCases(va_list *args, int *printCount, const char *format)
 			*(printCount) += putint(tmp);
 			break;
 		case 'b':
-			tmp = va_arg(*args, int);
-			*(printCount) += putbinary(tmp);
+			tmmp = va_arg(*args, int);
+			*(printCount) += putbinary(tmmp);
 			break;
 		case '\0':
 			_putchar('%');
