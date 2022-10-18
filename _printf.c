@@ -82,6 +82,9 @@ int checkCases(va_list *args, int *printCount, const char *format)
 		case 'X':
 			*(printCount) += putUhexa(va_arg(*args, int));
 			break;
+		case 'S':
+			*(printCount) += putS(va_arg(*args, char *));
+			break;
 		case '\0':
 			_putchar('%');
 			(*printCount)++;
