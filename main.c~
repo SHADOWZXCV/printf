@@ -1,0 +1,17 @@
+#include <limits.h>
+#include <stdio.h>
+#include "main.h"
+int main(void){
+	int len;
+	int *ptr = NULL;
+	len = printf("%p\n", ptr);
+	printf("[%d]\n",len);
+	len = _printf("%p\n", ptr);
+	printf("[%d]\n",len);
+	
+		
+	return 0;
+}
+/**
+	"ezzeldin"
+*/
