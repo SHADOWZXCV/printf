@@ -86,7 +86,10 @@ int checkCases(va_list *args, int *printCount, const char *format)
 			*(printCount) += putS(va_arg(*args, char *));
 			break;
 		case 'p':
-			*(printCount) += putPointer(va_arg(*args,  unsigned long));
+			*(printCount) += putPointer(va_arg(*args, unsigned long));
+			break;
+		case 'r':
+			putReverseStr(va_arg(*args, char*), printCount);
 			break;
 		case '\0':
 			_putchar('%');

@@ -13,6 +13,7 @@ int putuoctal(unsigned int num);
 int putuhexa(unsigned int num);
 int putUhexa(unsigned int num);
 int putPointer(unsigned long address);
+void putReverseStr(char *str, int *count);
 int _printf(const char *format, ...);
 int _putchar(char c);
 
