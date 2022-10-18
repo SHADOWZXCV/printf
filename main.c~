@@ -3,7 +3,6 @@
 #include "main.h"
 int main(void){
 	
-	printf("%S\n", "Best\nSchool");
-	_printf("%S\n", "Best\nSchool");
+	_printf("%S\n", "Best\nSch\rool");
 	return (0);
 }

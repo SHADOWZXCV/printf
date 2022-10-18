@@ -24,7 +24,7 @@ int putS(char *str)
 				_putchar('0');
 			}
 			putUhexa(tmp);
-			count += 3;
+			count += 4;
 		}
 		else
 		{

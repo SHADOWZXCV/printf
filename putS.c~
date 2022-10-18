@@ -18,7 +18,7 @@ int putS(char *str)
 		tmp = *(str++);
 		if ((tmp > 0 && tmp < 32) || (tmp >= 127))
 		{
-			_putchar('\\x');
+			putstr("\\x");
 			if (tmp < 16)
 			{
 				_putchar('0');
