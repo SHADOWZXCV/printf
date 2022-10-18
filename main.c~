@@ -3,12 +3,22 @@
 #include "main.h"
 int main(void){
 	int len;
-	int *ptr = NULL;
-	len = printf("%p\n", ptr);
+	char x = 6;
+	int y = 4;
+	double m = 5.0;
+	len = printf("%p\n", &x);
 	printf("[%d]\n",len);
-	len = _printf("%p\n", ptr);
+	len = _printf("%p\n", &x);
 	printf("[%d]\n",len);
-	
+	len = printf("%p\n", &y);
+	printf("[%d]\n",len);
+	len = _printf("%p\n", &y);
+	printf("[%d]\n",len);
+		
+	len = printf("%p\n", &x);
+	printf("[%d]\n",len);
+	len = _printf("%p\n", &x);
+	printf("[%d]\n",len);
 		
 	return 0;
 }
