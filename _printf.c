@@ -85,6 +85,9 @@ int checkCases(va_list *args, int *printCount, const char *format)
 		case 'S':
 			*(printCount) += putS(va_arg(*args, char *));
 			break;
+		case 'p':
+			*(printCount) += putPointer(va_arg(*args,  unsigned long));
+			break;
 		case '\0':
 			_putchar('%');
 			(*printCount)++;
