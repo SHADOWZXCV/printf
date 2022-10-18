@@ -2,13 +2,7 @@
 #include <stdio.h>
 #include "main.h"
 int main(void){
-	int len;
-	
-	len = printf("hello world %d %d\n", 101011, 56789);
-	printf("lenptr[%d]\n", len);
-	len = _printf("hello world %d %d\n", 101011, 56789);
-	printf("len_ptr[%d]\n", len);
-		
+	_printf("%b", 16);
 	return 0;
 }
 /**
