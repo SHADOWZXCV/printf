@@ -91,6 +91,9 @@ int checkCases(va_list *args, int *printCount, const char *format)
 		case 'r':
 			putReverseStr(va_arg(*args, char*), printCount);
 			break;
+		case 'R':
+			*(printCount) += putRot13Str(va_arg(*args, char*));
+			break;
 		case '\0':
 			_putchar('%');
 			(*printCount)++;

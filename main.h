@@ -14,6 +14,7 @@ int putuhexa(unsigned int num);
 int putUhexa(unsigned int num);
 int putPointer(unsigned long address);
 void putReverseStr(char *str, int *count);
+int putRot13Str(char *str);
 int _printf(const char *format, ...);
 int _putchar(char c);
 
