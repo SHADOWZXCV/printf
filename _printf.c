@@ -48,9 +48,6 @@ int _printf(const char *format, ...)
  */
 int checkCases(va_list *args, int *printCount, const char *format)
 {
-	char *str;
-	int tmp;
-	unsigned int tmmp;
 
 	switch (*(format))
 	{
@@ -60,21 +57,30 @@ int checkCases(va_list *args, int *printCount, const char *format)
 			break;
 		case 's':
 			{
-				str = va_arg(*args, char*);
-				*printCount += putstr(str);
+				*printCount += putstr(va_arg(*args, char*));
 			}
 			break;
 		case 'd':
-			tmp = va_arg(*args, int);
-			*(printCount) += putint(tmp);
+
+			*(printCount) += putint(va_arg(*args, int));
 			break;
 		case 'i':
-			tmp = va_arg(*args, int);
-			*(printCount) += putint(tmp);
+			*(printCount) += putint(va_arg(*args, int));
 			break;
 		case 'b':
-			tmmp = va_arg(*args, int);
-			*(printCount) += putbinary(tmmp);
+			*(printCount) += putbinary(va_arg(*args, int));
+			break;
+		case 'u':
+			*(printCount) += putunsignedint(va_arg(*args, int));
+			break;
+		case 'o':
+			*(printCount) += putuoctal(va_arg(*args, int));
+			break;
+		case 'x':
+			*(printCount) += putuhexa(va_arg(*args, int));
+			break;
+		case 'X':
+			*(printCount) += putUhexa(va_arg(*args, int));
 			break;
 		case '\0':
 			_putchar('%');

@@ -2,11 +2,8 @@
 #include <stdio.h>
 #include "main.h"
 int main(void){
-	_printf("%b\n", 23);
-	printf("%B\n", 23);
-		
-	return 0;
+	
+	_printf("%X\n", 1521);
+	printf("%X\n", 1521);
+	return (0);
 }
-/**
-	"ezzeldin"
-*/
